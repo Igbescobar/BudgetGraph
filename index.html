@@ -1,0 +1,296 @@
+<!-- a basic html document -->
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Bucks2Bar</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <!-- black bootstrap navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="./index.html">Bucks2Bar</a>
+      </div>
+  </nav>
+  <!--  bootstrap tabs, 2 tabs, first one called Data and the second one called Chart-->
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col">
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+          <li class="nav-item" role="presentation">
+            <a class="nav-link active" id="data-tab" data-bs-toggle="tab" href="#data" role="tab" aria-controls="data" aria-selected="true">Data</a>
+          </li>
+          <li class="nav-item" role="presentation">
+            <a class="nav-link" id="chart-tab" data-bs-toggle="tab" href="#chart" role="tab" aria-controls="chart" aria-selected="false">Chart</a>
+          </li>
+        </ul>
+        <div class="tab-content" id="myTabContent">
+          <div class="tab-pane fade show active" id="data" role="tabpanel" aria-labelledby="data-tab">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-sm-12 col-md-6">
+                  <label for="{{ month|lower }}" class="fw-bold">January</label>
+                  <div class="row">
+                    <div class="col">
+                      <div class="input-group mb-3">
+                        <span class="input-group-text" id="basic-addon-income-{{ month|lower }}">Income</span>
+                        <input type="number" class="form-control" placeholder="Income" aria-label="Income"
+                          aria-describedby="basic-addon-income-{{ month|lower }}" id="{{ month|lower }}Income" />
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="input-group mb-3">
+                        <span class="input-group-text" id="basic-addon-expenses-{{ month|lower }}">Expenses</span>
+                        <input type="number" class="form-control" placeholder="Expenses" aria-label="Expenses"
+                          aria-describedby="basic-addon-expenses-{{ month|lower }}" id="{{ month|lower }}Expenses" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-12 col-md-6">
+                  <label for="{{ month|lower }}" class="fw-bold">February</label>
+                  <div class="row">
+                    <div class="col">
+                      <div class="input-group mb-3">
+                        <span class="input-group-text" id="basic-addon-income-{{ month|lower }}">Income</span>
+                        <input type="number" class="form-control" placeholder="Income" aria-label="Income"
+                          aria-describedby="basic-addon-income-{{ month|lower }}" id="{{ month|lower }}Income" />
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="input-group mb-3">
+                        <span class="input-group-text" id="basic-addon-expenses-{{ month|lower }}">Expenses</span>
+                        <input type="number" class="form-control" placeholder="Expenses" aria-label="Expenses"
+                          aria-describedby="basic-addon-expenses-{{ month|lower }}" id="{{ month|lower }}Expenses" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+              <div class="col-sm-12 col-md-6">
+                  <label for="{{ month|lower }}" class="fw-bold">March</label>
+                  <div class="row">
+                    <div class="col">
+                      <div class="input-group mb-3">
+                        <span class="input-group-text" id="basic-addon-income-{{ month|lower }}">Income</span>
+                        <input type="number" class="form-control" placeholder="Income" aria-label="Income"
+                          aria-describedby="basic-addon-income-{{ month|lower }}" id="{{ month|lower }}Income" />
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="input-group mb-3">
+                        <span class="input-group-text" id="basic-addon-expenses-{{ month|lower }}">Expenses</span>
+                        <input type="number" class="form-control" placeholder="Expenses" aria-label="Expenses"
+                          aria-describedby="basic-addon-expenses-{{ month|lower }}" id="{{ month|lower }}Expenses" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-12 col-md-6">
+                  <label for="{{ month|lower }}" class="fw-bold">April</label>
+                  <div class="row">
+                    <div class="col">
+                      <div class="input-group mb-3">
+                        <span class="input-group-text" id="basic-addon-income-{{ month|lower }}">Income</span>
+                        <input type="number" class="form-control" placeholder="Income" aria-label="Income"
+                          aria-describedby="basic-addon-income-{{ month|lower }}" id="{{ month|lower }}Income" />
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="input-group mb-3">
+                        <span class="input-group-text" id="basic-addon-expenses-{{ month|lower }}">Expenses</span>
+                        <input type="number" class="form-control" placeholder="Expenses" aria-label="Expenses"
+                          aria-describedby="basic-addon-expenses-{{ month|lower }}" id="{{ month|lower }}Expenses" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+              <div class="col-sm-12 col-md-6">
+                  <label for="{{ month|lower }}" class="fw-bold">May</label>
+                  <div class="row">
+                    <div class="col">
+                      <div class="input-group mb-3">
+                        <span class="input-group-text" id="basic-addon-income-{{ month|lower }}">Income</span>
+                        <input type="number" class="form-control" placeholder="Income" aria-label="Income"
+                          aria-describedby="basic-addon-income-{{ month|lower }}" id="{{ month|lower }}Income" />
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="input-group mb-3">
+                        <span class="input-group-text" id="basic-addon-expenses-{{ month|lower }}">Expenses</span>
+                        <input type="number" class="form-control" placeholder="Expenses" aria-label="Expenses"
+                          aria-describedby="basic-addon-expenses-{{ month|lower }}" id="{{ month|lower }}Expenses" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-12 col-md-6">
+                  <label for="{{ month|lower }}" class="fw-bold">June</label>
+                  <div class="row">
+                    <div class="col">
+                      <div class="input-group mb-3">
+                        <span class="input-group-text" id="basic-addon-income-{{ month|lower }}">Income</span>
+                        <input type="number" class="form-control" placeholder="Income" aria-label="Income"
+                          aria-describedby="basic-addon-income-{{ month|lower }}" id="{{ month|lower }}Income" />
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="input-group mb-3">
+                        <span class="input-group-text" id="basic-addon-expenses-{{ month|lower }}">Expenses</span>
+                        <input type="number" class="form-control" placeholder="Expenses" aria-label="Expenses"
+                          aria-describedby="basic-addon-expenses-{{ month|lower }}" id="{{ month|lower }}Expenses" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+              <div class="col-sm-12 col-md-6">
+                  <label for="{{ month|lower }}" class="fw-bold">July</label>
+                  <div class="row">
+                    <div class="col">
+                      <div class="input-group mb-3">
+                        <span class="input-group-text" id="basic-addon-income-{{ month|lower }}">Income</span>
+                        <input type="number" class="form-control" placeholder="Income" aria-label="Income"
+                          aria-describedby="basic-addon-income-{{ month|lower }}" id="{{ month|lower }}Income" />
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="input-group mb-3">
+                        <span class="input-group-text" id="basic-addon-expenses-{{ month|lower }}">Expenses</span>
+                        <input type="number" class="form-control" placeholder="Expenses" aria-label="Expenses"
+                          aria-describedby="basic-addon-expenses-{{ month|lower }}" id="{{ month|lower }}Expenses" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-12 col-md-6">
+                  <label for="{{ month|lower }}" class="fw-bold">August</label>
+                  <div class="row">
+                    <div class="col">
+                      <div class="input-group mb-3">
+                        <span class="input-group-text" id="basic-addon-income-{{ month|lower }}">Income</span>
+                        <input type="number" class="form-control" placeholder="Income" aria-label="Income"
+                          aria-describedby="basic-addon-income-{{ month|lower }}" id="{{ month|lower }}Income" />
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="input-group mb-3">
+                        <span class="input-group-text" id="basic-addon-expenses-{{ month|lower }}">Expenses</span>
+                        <input type="number" class="form-control" placeholder="Expenses" aria-label="Expenses"
+                          aria-describedby="basic-addon-expenses-{{ month|lower }}" id="{{ month|lower }}Expenses" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div> 
+              <div class="row">
+              <div class="col-sm-12 col-md-6">
+                  <label for="{{ month|lower }}" class="fw-bold">September</label>
+                  <div class="row">
+                    <div class="col">
+                      <div class="input-group mb-3">
+                        <span class="input-group-text" id="basic-addon-income-{{ month|lower }}">Income</span>
+                        <input type="number" class="form-control" placeholder="Income" aria-label="Income"
+                          aria-describedby="basic-addon-income-{{ month|lower }}" id="{{ month|lower }}Income" />
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="input-group mb-3">
+                        <span class="input-group-text" id="basic-addon-expenses-{{ month|lower }}">Expenses</span>
+                        <input type="number" class="form-control" placeholder="Expenses" aria-label="Expenses"
+                          aria-describedby="basic-addon-expenses-{{ month|lower }}" id="{{ month|lower }}Expenses" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-12 col-md-6">
+                  <label for="{{ month|lower }}" class="fw-bold">October</label>
+                  <div class="row">
+                    <div class="col">
+                      <div class="input-group mb-3">
+                        <span class="input-group-text" id="basic-addon-income-{{ month|lower }}">Income</span>
+                        <input type="number" class="form-control" placeholder="Income" aria-label="Income"
+                          aria-describedby="basic-addon-income-{{ month|lower }}" id="{{ month|lower }}Income" />
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="input-group mb-3">
+                      <span class="input-group-text" id="basic-addon-expenses-{{ month|lower }}">Expenses</span>
+                      <input type="number" class="form-control" placeholder="Expenses" aria-label="Expenses"
+                        aria-describedby="basic-addon-expenses-{{ month|lower }}" id="{{ month|lower }}Expenses" />
+                    </div>
+                    </div>
+                  </div>
+                </div>
+              </div>  
+              <div class="row">
+              <div class="col-sm-12 col-md-6">
+                  <label for="{{ month|lower }}" class="fw-bold">November</label>
+                  <div class="row">
+                    <div class="col">
+                      <div class="input-group mb-3">
+                      <span class="input-group-text" id="basic-addon-income-{{ month|lower }}">Income</span>
+                      <input type="number" class="form-control" placeholder="Income" aria-label="Income"
+                        aria-describedby="basic-addon-income-{{ month|lower }}" id="{{ month|lower }}Income" />
+                    </div>
+                    </div>
+                    <div class="col">
+                      <div class="input-group mb-3">
+                      <span class="input-group-text" id="basic-addon-expenses-{{ month|lower }}">Expenses</span>
+                      <input type="number" class="form-control" placeholder="Expenses" aria-label="Expenses"
+                        aria-describedby="basic-addon-expenses-{{ month|lower }}" id="{{ month|lower }}Expenses" />
+                    </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-12 col-md-6">
+                  <label for="{{ month|lower }}" class="fw-bold">December</label>
+                  <div class="row">
+                    <div class="col">
+                      <div class="input-group mb-3">
+                      <span class="input-group-text" id="basic-addon-income-{{ month|lower }}">Income</span>
+                      <input type="number" class="form-control" placeholder="Income" aria-label="Income"
+                        aria-describedby="basic-addon-income-{{ month|lower }}" id="{{ month|lower }}Income" />
+                    </div>
+                    </div>
+                    <div class="col">
+                      <div class="input-group mb-3">
+                      <span class="input-group-text" id="basic-addon-expenses-{{ month|lower }}">Expenses</span>
+                      <input type="number" class="form-control" placeholder="Expenses" aria-label="Expenses"
+                        aria-describedby="basic-addon-expenses-{{ month|lower }}" id="{{ month|lower }}Expenses" />
+                    </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </div>
+          </div>
+          <div class="tab-pane fade" id="chart" role="tabpanel" aria-labelledby="chart-tab">
+            <!-- chart graph  -->
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col">
+                  <h1>Chart with JS</h1>
+                  <canvas id="myChart" width="400" height="400"></canvas>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+</body>
+
+</html>
